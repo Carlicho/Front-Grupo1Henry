@@ -1,12 +1,12 @@
 import './App.css'
 import PathRoutes from './helpers/PathRoutes.Helpers.Js'
 import { Route, Routes } from 'react-router-dom'
-import About from './Views/About/About'
-import NavBar from './NavBar/Nav'
-import Products from './Views/Productos/Products'
-import Login from './NavBar/Login/Login'
-import Ayuda from './Views/Ayuda/Ayuda'
-import Index from './Views/Index/Index'
+import About from './components/Views/About/About'
+import NavBar from './components/NavBar/Nav'
+import Products from './components/Views/Productos/Products'
+import Login from './components/NavBar/Login/Login'
+import Ayuda from './components/Views/Ayuda/Ayuda'
+import Index from './components/Views/Index/Index'
 
 function App() {
   
