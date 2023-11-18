@@ -11,16 +11,51 @@ export const ContainerFlex = styled.div`
     justify-content: space-between;
 `
 export const ContainerWrapperContent = styled.div`
-    background-color: red;
+    /* background-color: blue; */
+    width: 25%;
+    margin-top: 2%;
 `
 
 export const SeparateVertical = styled.div`
-    border-right: 1px solid white;
-    width: 25%;
-    height: 80px;
-    margin-top: 2%;
+     border-left: 1px solid white;
+     height: 100%;
 `
 export const ContainerLogo = styled.img`
     width: 25%;
     margin-left: 65%;
+`
+export const WrapperContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+`
+
+export const ButtonFooter = styled.button`
+    border: 1px solid white;
+    width: 25%;
+    border-radius: 3px;
+    color: white;
+    background-color: #fd611a;
+    margin-bottom: 5%;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: #fd611a;
+    }
+`
+export const ButtonContactFooter = styled(ButtonFooter)`
+    width: 70%;
+`
+
+export const ButtonJobFooter = styled(ButtonFooter)`
+    width: 60%;
+    margin-top: 15px;
+`
+
+export const LogosGeneralContainerFooter = styled.img`
+    display: flex;
+    flex-direction: column;
+    width: 15%;
 `
