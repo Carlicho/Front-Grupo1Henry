@@ -1,8 +1,8 @@
 const PathRoutes = {
     LANDING:"/",
-    HOME:"/home",
+    INDEX:"/index",
     ABOUT:"/about",
-    PRODUCTS:"/products",
+    PRODUCTOS:"/productos",
     LOGIN:"/account"
 }
 

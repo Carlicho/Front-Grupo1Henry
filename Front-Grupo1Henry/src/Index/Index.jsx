@@ -1,6 +1,6 @@
 
 
-const Index = () => {
+const LandingPage = () => {
   return (
     <div>
         <h1>Innova</h1>
@@ -14,4 +14,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default LandingPage
