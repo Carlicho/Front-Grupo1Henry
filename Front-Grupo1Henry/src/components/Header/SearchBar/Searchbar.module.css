@@ -1,0 +1,51 @@
+.mainHeader {
+    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin: 0 70px;
+    padding: 10px;
+}
+
+.inputBox{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 31.25rem;
+    height: 3.9375rem;
+    
+}
+
+.searchInput{
+    border: black 3px solid;
+    width: 31.25rem;
+    height: 3.9375rem;
+    padding: 0 16px
+}
+
+.lupaBtn{
+    position:absolute;
+    right: 5px;
+    top: 30%; 
+    border: none; 
+    cursor: pointer;  
+    
+    
+}
+.btnLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.75rem;
+    height: 2.25rem;
+    background-color: #fd611a;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #000;
+    font-size: 18px;
+    color: #fff;
+}
+
+.btnLogin {
+    cursor: pointer;
+}
