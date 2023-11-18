@@ -1,0 +1,25 @@
+.nav {
+    
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f00a0aff;
+    width: 100%;
+    
+}
+
+.logoname {
+    font-size: 32px;
+    letter-spacing: 5px;
+    color: rgb(57, 57, 119);
+    text-shadow: #FFFF 1px 1px 1px 2px;
+    text-shadow: #FFFF -1px -1px -1px -2px;
+    text-shadow: #FFFF -2.5px -1px 1px ;
+}
+
+.navlink {
+    color: #d1d0d0;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
