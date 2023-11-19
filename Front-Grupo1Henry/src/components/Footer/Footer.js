@@ -78,4 +78,9 @@ export const ContainerFollowme = styled.div`
 export const ContainerLogos = styled.div`
     display: flex;
     padding-left: 10px;
+    padding-top: 10PX;
+`
+
+export const LogosContact = styled.div`
+    padding-left: 20px;
 `

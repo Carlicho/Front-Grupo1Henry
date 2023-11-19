@@ -1,4 +1,7 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 import { 
   ContainerGeneralFooter,
   ContainerFlex,
@@ -10,9 +13,9 @@ import {
   ButtonContactFooter,
   ButtonJobFooter,
   ContainerButtons,
-  LogosGeneralContainerFooter,
   ContainerFollowme,
-  ContainerLogos
+  ContainerLogos,
+  LogosContact
 } from './Footer'
 
 const Footer = () => {
@@ -58,9 +61,18 @@ const Footer = () => {
               Seguinos en
             </ContainerFollowme>
             <ContainerLogos>
-              <LogosGeneralContainerFooter src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="youTube" />
-              <LogosGeneralContainerFooter src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="youTube" />
-              <LogosGeneralContainerFooter src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="youTube" />
+              <LogosContact>
+                <FontAwesomeIcon icon={faCoffee} />                
+              </LogosContact>
+              <LogosContact>
+                <FontAwesomeIcon icon={faCoffee} />                
+              </LogosContact>
+              <LogosContact>
+                <FontAwesomeIcon icon={faCoffee} />                
+              </LogosContact>
+              <LogosContact>
+                <FontAwesomeIcon icon={faCoffee} />                
+              </LogosContact>
             </ContainerLogos>
           </SeparateVertical>
         </ContainerWrapperContent>
