@@ -9,7 +9,9 @@ import {
   ButtonFooter,
   ButtonContactFooter,
   ButtonJobFooter,
-  LogosGeneralContainerFooter
+  LogosGeneralContainerFooter,
+  ContainerFollowme,
+  ContainerLogos
 } from './Footer'
 
 const Footer = () => {
@@ -47,8 +49,14 @@ const Footer = () => {
 
         <ContainerWrapperContent>
           <SeparateVertical>
-            <LogosGeneralContainerFooter src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="youTube" />
-            Seguinos
+            <ContainerFollowme>
+              Seguinos en
+            </ContainerFollowme>
+            <ContainerLogos>
+              <LogosGeneralContainerFooter src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="youTube" />
+              <LogosGeneralContainerFooter src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="youTube" />
+              <LogosGeneralContainerFooter src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="youTube" />
+            </ContainerLogos>
           </SeparateVertical>
         </ContainerWrapperContent>
       </ContainerFlex>

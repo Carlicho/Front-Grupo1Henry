@@ -9,20 +9,24 @@ export const ContainerGeneralFooter = styled.div`
 export const ContainerFlex = styled.div`
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 `
 export const ContainerWrapperContent = styled.div`
-    /* background-color: blue; */
     width: 25%;
-    margin-top: 2%;
 `
 
 export const SeparateVertical = styled.div`
      border-left: 1px solid white;
-     height: 100%;
+     height: 80%;
+     margin-top: 10px;
 `
 export const ContainerLogo = styled.img`
-    width: 25%;
-    margin-left: 65%;
+    float: right;
+    height: 80%;
+    margin-right: 20px;
+    margin-top: 10px;
 `
 export const WrapperContent = styled.div`
     display: flex;
@@ -51,11 +55,23 @@ export const ButtonContactFooter = styled(ButtonFooter)`
 
 export const ButtonJobFooter = styled(ButtonFooter)`
     width: 60%;
-    margin-top: 15px;
+    margin-top: 20px;
 `
 
 export const LogosGeneralContainerFooter = styled.img`
     display: flex;
     flex-direction: column;
     width: 15%;
+`
+
+export const ContainerFollowme = styled.div`
+    color: white;
+    text-align: left;
+    margin-left: 2%;
+    padding-top: 15px;
+    padding-left: 25px;
+    `
+export const ContainerLogos = styled.div`
+    display: flex;
+    padding-left: 10px;
 `
