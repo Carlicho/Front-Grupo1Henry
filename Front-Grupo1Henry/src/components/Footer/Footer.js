@@ -38,7 +38,7 @@ export const WrapperContent = styled.div`
 
 export const ButtonFooter = styled.button`
     border: 1px solid white;
-    width: 25%;
+    width: 100%;
     border-radius: 3px;
     color: white;
     background-color: #fd611a;
@@ -49,13 +49,17 @@ export const ButtonFooter = styled.button`
         color: #fd611a;
     }
 `
+
+export const ContainerButtons = styled.div`
+    margin-top: 20px;
+`
+
 export const ButtonContactFooter = styled(ButtonFooter)`
     width: 70%;
 `
 
 export const ButtonJobFooter = styled(ButtonFooter)`
     width: 60%;
-    margin-top: 20px;
 `
 
 export const LogosGeneralContainerFooter = styled.img`

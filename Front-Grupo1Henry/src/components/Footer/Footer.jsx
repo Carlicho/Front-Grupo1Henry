@@ -9,6 +9,7 @@ import {
   ButtonFooter,
   ButtonContactFooter,
   ButtonJobFooter,
+  ContainerButtons,
   LogosGeneralContainerFooter,
   ContainerFollowme,
   ContainerLogos
@@ -25,9 +26,11 @@ const Footer = () => {
           <ContainerWrapperContent>
             <SeparateVertical>
               <WrapperContent>
-                <ButtonFooter>
-                  Ayuda
-                </ButtonFooter>
+                <ContainerButtons>
+                  <ButtonFooter>
+                    Ayuda
+                  </ButtonFooter>
+                </ContainerButtons>
                   Si tenés sugerencias o comentarios,
                   contactanos
               </WrapperContent>
@@ -37,12 +40,14 @@ const Footer = () => {
         <ContainerWrapperContent>
           <SeparateVertical>
             <WrapperContent>
-              <ButtonJobFooter>
-                ¡Trabajá con nosotros! 
-              </ButtonJobFooter>
-              <ButtonContactFooter>
-                Botón de arrepentimiento 
-              </ButtonContactFooter>
+              <ContainerButtons>
+                <ButtonJobFooter>
+                  ¡Trabajá con nosotros! 
+                </ButtonJobFooter>
+                <ButtonContactFooter>
+                  Botón de arrepentimiento 
+                </ButtonContactFooter>
+              </ContainerButtons>
             </WrapperContent>
           </SeparateVertical>
         </ContainerWrapperContent>
