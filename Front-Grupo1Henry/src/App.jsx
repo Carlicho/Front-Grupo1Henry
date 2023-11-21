@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Products from './components/products/products'
 import Help from './components/Help/Help'
 import Index from './components/Views/Index/Index'
+import Footer from './components/Footer/Footer'
 
 function App() {
   
@@ -28,7 +29,7 @@ function App() {
       <Route path={PathRoutes.ABOUT} element={<About/>}/>
  
     </Routes> 
-   
+    <Footer />
     </div>
   )
 }
