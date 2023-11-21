@@ -17,7 +17,7 @@ const SearchBar = () => {
   return (
     <div className={styles.mainHeader}>
             <Sh1>Innova</Sh1>
-            <div className='inputLogin'>
+            <div className={styles.inputLogin}>
             <div className={styles.inputBox}>
             <input placeholder='BUSCAR' type='search' className={styles.searchInput}></input>
             <button className={styles.lupaBtn}><HiOutlineSearch size="30px" /></button>

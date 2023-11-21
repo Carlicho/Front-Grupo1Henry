@@ -10,9 +10,11 @@
 
 .inputLogin{
     display: flex;
+    max-width: 900px;
+    width: 900px;
     justify-content: space-between;
     align-items:center;
-    flex-direction: row;
+    
 }
 
 .inputBox{
@@ -88,7 +90,13 @@
         
     }
 
+    .mainHeader{
+        flex-direction: column;
+    }
 
+    .inputLogin{
+        width: 35rem;
+    }
 
 
 }
