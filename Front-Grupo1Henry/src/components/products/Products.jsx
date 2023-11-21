@@ -16,9 +16,8 @@ const Products = () => {
 
   return (
     <div>
-   
-      <ProductCards/> 
-      </div>
+        <ProductCards/>
+    </div>
   )
 }
 

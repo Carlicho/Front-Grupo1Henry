@@ -8,6 +8,7 @@ import Help from './components/Help/Help'
 import Index from './components/Views/Index/Index'
 import Footer from './components/Footer/Footer'
 import ProductCategories from './components/products/ProductCategories/ProductCategories'
+import ProductContainer from './components/products/ProductContainer'
 
 function App() {
   
@@ -17,11 +18,11 @@ function App() {
 
 
     
-
+   
     <Header/>
-    <ProductCategories />
-      
+
     
+    <ProductCategories />
     <Routes>
       <Route path={PathRoutes.LANDING} element={<Index/>}/>
       <Route path={PathRoutes.INDEX} element={<Index/>}/>
@@ -30,6 +31,7 @@ function App() {
       <Route path={PathRoutes.ABOUT} element={<About/>}/>
  
     </Routes> 
+   
     <Footer />
     </div>
   )

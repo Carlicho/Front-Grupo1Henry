@@ -8,6 +8,12 @@ import {
 
 const ProductCategories = () => {
     const [dropDown, setDropDown] = useState(false)
+    const [showCategories, setShowCategories] = useState([
+        'Notebooks',
+        'Monitores',
+        'Perifericos'
+    ])
+    
     const isActiveDropdown = () => {
         setDropDown(!dropDown)
     }
@@ -18,15 +24,18 @@ const ProductCategories = () => {
         {
             dropDown ? (
                 <DropdownContent>
-                    <DropdownItem>
-                        Notebooks
-                    </DropdownItem>
-                    <DropdownItem>
-                        Monitores
-                    </DropdownItem>
-                    <DropdownItem>
-                        Perifericos
-                    </DropdownItem>
+                    {
+                        showCategories.map((item => {
+                            console.log(item, 'ga');
+                            return (
+                                <DropdownItem>
+                                    {
+                                        item
+                                    }
+                                </DropdownItem>
+                            )
+                        }))
+                    }
                 </DropdownContent> 
                 ) : ('') 
         }

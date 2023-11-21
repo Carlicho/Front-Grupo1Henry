@@ -7,8 +7,9 @@ import styled from 'styled-components'
 const ProductCards = () => {
 
     const ProductCardsContainer = styled.div`
-
-        `;
+      display: flex;
+      flex-direction: column;
+    `;
 
   return (
     <ProductCardsContainer>

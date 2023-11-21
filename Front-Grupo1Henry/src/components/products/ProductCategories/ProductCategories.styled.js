@@ -6,9 +6,6 @@ export const container = styled.div`
 `
  export const Dropdown = styled.div`
     width: 400px;
-    /* margin: 100px auto; */
-    /* background-color: green; */
-    border: 2px solid black;
 `
 
 export const DropdownBtn = styled(Dropdown)`
@@ -16,8 +13,6 @@ export const DropdownBtn = styled(Dropdown)`
     background-color: white;
     box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
     display: flex;
-    /* align-items: center;
-    justify-content: space-between; */
 `
 export const DropdownContent = styled.div`
     background-color: white;
