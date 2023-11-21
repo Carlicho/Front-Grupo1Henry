@@ -4,8 +4,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: #f00a0aff;
+    border: 3px solid #F00a;
+    background-color: #fd611a;
     width: 100%;
+    height: 3.8rem;
+    color: #f00a0aff;
+    
     
 }
 
@@ -19,7 +23,9 @@
 }
 
 .navlink {
-    color: #d1d0d0;
+    color: #020202;
     letter-spacing: 2px;
     text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 19px;
 }

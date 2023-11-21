@@ -3,7 +3,8 @@ const PathRoutes = {
     INDEX:"/index",
     ABOUT:"/about",
     PRODUCTOS:"/productos",
-    LOGIN:"/account"
+    LOGIN:"/account",
+    AYUDA:"/ayuda"
 }
 
 export default PathRoutes
