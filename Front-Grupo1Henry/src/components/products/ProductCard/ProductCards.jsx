@@ -2,6 +2,7 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import styled from 'styled-components'
 import ProductCategories from '../ProductCategories/ProductCategories';
+import ProductFilterPrice from '../ProductFilterPrice/ProductFilterPrice';
 
 
 const ProductCards = () => {
@@ -13,10 +14,16 @@ const ProductCards = () => {
     const ProductContainer = styled.div`
       display: flex;
     `;
+    const ContainerOptionsProducts = styled.div`
+    
+    `;
 
   return (
     <ProductContainer>
-      <ProductCategories />
+      <ContainerOptionsProducts>
+        <ProductCategories />
+        <ProductFilterPrice />
+      </ContainerOptionsProducts>
         <ProductCardsContainer>
             <ProductCard/>
             <ProductCard/>
