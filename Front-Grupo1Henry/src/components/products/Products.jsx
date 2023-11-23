@@ -10,9 +10,6 @@ import ProductCards from './ProductCard/ProductCards'
 
 const Products = () => {
 
-  const MyH3 = styled.h3`
-    letter-spacing: 20px;
-  `
 
   return (
     <div>

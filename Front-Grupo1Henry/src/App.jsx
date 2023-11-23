@@ -8,6 +8,7 @@ import Help from './components/Help/Help'
 import Index from './components/Views/Index/Index'
 import Footer from './components/Footer/Footer'
 import ProductCategories from './components/products/ProductCategories/ProductCategories'
+import ProductDetail from './components/products/ProductDetailCard/ProductDetail'
 
 function App() {
   
@@ -26,6 +27,7 @@ function App() {
       <Route path={PathRoutes.LANDING} element={<Index/>}/>
       <Route path={PathRoutes.INDEX} element={<Index/>}/>
       <Route path={PathRoutes.PRODUCTOS} element={<Products/>}/>
+      <Route path={PathRoutes.DETAIL} element={<ProductDetail/>}/>
       <Route path={PathRoutes.AYUDA} element={<Help/>}/>
       <Route path={PathRoutes.ABOUT} element={<About/>}/>
  

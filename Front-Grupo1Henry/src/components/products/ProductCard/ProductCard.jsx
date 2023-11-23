@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { TiShoppingCart } from "react-icons/ti";
+import { Link } from 'react-router-dom';
 
 const ProductCard = () => {
     const CardContainer = styled.div`
@@ -70,7 +71,10 @@ const ProductshopcartDescription = styled.span`
   return (
     <div>
         <CardContainer>
-            <CardImg src='https://imagenes.compragamer.com/productos/compragamer_Imganen_general_16752_Procesador_AMD_RYZEN_3_3200G_4.0GHz_Turbo___Radeon_Vega_8_AM4_Wraith_Stealth_Cooler_f414a507-grn.jpg'></CardImg>
+
+            <Link to="/productDetail">
+            <CardImg  src='https://imagenes.compragamer.com/productos/compragamer_Imganen_general_16752_Procesador_AMD_RYZEN_3_3200G_4.0GHz_Turbo___Radeon_Vega_8_AM4_Wraith_Stealth_Cooler_f414a507-grn.jpg'></CardImg>
+            </Link>
             <Cardbody>
                 <ProductDescription>
 Procesador AMD RYZEN 3 3200G 4.0GHz Turbo + Radeon Vega 8 AM4 Wraith Stealth Cooler
