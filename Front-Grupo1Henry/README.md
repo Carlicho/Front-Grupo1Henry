@@ -1,11 +1,14 @@
-# React + Vite
+auth0 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+{
+  "sub": "auth0|6561807b022a9fc3bea0ef77",
+  "nickname": "carlosjlicho",
+  "name": "carlosjlicho@gmail.com",
+  "picture": "https://s.gravatar.com/avatar/bbdb41936c2fb1387832077a8432754f?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fca.png",
+  "updated_at": "2023-11-25T05:04:59.890Z"
+}
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
 
@@ -16,3 +19,6 @@ git status // me muestra los cambios que realice
 git add .  // actualiza todos los cambios que hice a mi repositorio local
 git commit // actualiza todos los cambios a subir de mi repositorio local a repositorio virtual
 git push   // sube todos los cambios seleccionados al repositorio virtual
+
+
+con f2 en visual studio puedo cambiar elnombre de la etiqueta de apertura y de cierre almismo tiempo

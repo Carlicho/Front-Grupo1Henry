@@ -7,20 +7,28 @@ import Products from './components/products/products'
 import Help from './components/Help/Help'
 import Index from './components/Views/Index/Index'
 import Footer from './components/Footer/Footer'
-import ProductCategories from './components/products/ProductCategories/ProductCategories'
+import axios from 'axios';
+
 import ProductDetail from './components/products/ProductDetailCard/ProductDetail'
+import UserSettings from './components/UserLogued/UserSettings'
+
+
+
+
 
 function App() {
+
+ 
   
+ 
 
   return (
     <div className='app'>
 
 
-    
 
     <Header/>
-    <ProductCategories />
+    
       
     
     <Routes>

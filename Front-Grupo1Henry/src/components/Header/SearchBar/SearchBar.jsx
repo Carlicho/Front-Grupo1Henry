@@ -15,17 +15,10 @@ const SearchBar = () => {
   `;
 
   return (
-    <div className={styles.mainHeader}>
-            <Sh1>Innova</Sh1>
-            <div className={styles.inputLogin}>
-            <div className={styles.inputBox}>
-            <input placeholder='BUSCAR' type='search' className={styles.searchInput}></input>
-            <button className={styles.lupaBtn}><HiOutlineSearch size="30px" /></button>
-            </div>
-            <button className={styles.btnLogin}>Iniciar Sesión </button>
-            
-            <TiShoppingCart  size="3.24rem" />
-            </div>
+    <div >
+        <div className={styles.inputBox}>
+          <div className={styles.searchInput}></div>
+        </div>
     </div>
 
   )

@@ -1,12 +1,14 @@
-.App {
-  text-align: center;
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  margin: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
-
-background-color: red;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+.app {
+
+  font-family: 'Roboto', sans-serif;
+}
+
 

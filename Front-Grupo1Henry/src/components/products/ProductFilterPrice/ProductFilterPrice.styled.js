@@ -9,25 +9,30 @@ export const container = styled.div`
 `
 
 export const DropdownBtn = styled(Dropdown)`
-    padding: 15px 20;
     background-color: white;
     box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
 `
-export const DropdownContent = styled.ul`
+export const DropdownContent = styled.div`
     background-color: white;
-
     
 `
-
-export const DropdownItem = styled.li`
+export const DropdownItem = styled.div`
     font-size: 1rem;
     padding-left: 6%;
-    padding-bottom: 1%;
-    list-style: none;
+    padding-top: 1%;
 `
 export const TextCategories = styled.div`
     padding-left: 4%;
+`
+export const ContainerInputs= styled.div`
+    display: flex;
+    padding-left: 1%;
+    padding-top: 2%;
+    
+`
+export const Inputs = styled.input`
+    /* width: 20%; */
+    padding-left: 5%;
 `
