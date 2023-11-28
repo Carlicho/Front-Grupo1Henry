@@ -10,7 +10,7 @@ import ProductContainer from './ProductContainer'
 
 
 
-const Products = () => {
+const Products = ({productos}) => {
   const ContainerFilterCat = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ const Products = () => {
         <ProductCategories/>
         <ProductFilterPrice />
       </ContainerFilterCat>
-      <ProductCards/> 
+      <ProductCards productos={productos} /> 
     </GeneralContainerProd>
   )
 }
