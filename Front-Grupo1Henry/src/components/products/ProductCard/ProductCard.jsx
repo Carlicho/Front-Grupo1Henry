@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from 'react-router-dom';
 
-const ProductCard = () => {
+const ProductCard = ({productos}) => {
     const CardContainer = styled.div`
 
     display: flex;
@@ -63,7 +63,7 @@ const ProductshopcartDescription = styled.span`
 `
 
 
-
+console.log(productos, ' -> productos');
 
 
 
@@ -73,14 +73,19 @@ const ProductshopcartDescription = styled.span`
         <CardContainer>
 
             <Link to="/productDetail">
-            <CardImg  src='https://imagenes.compragamer.com/productos/compragamer_Imganen_general_16752_Procesador_AMD_RYZEN_3_3200G_4.0GHz_Turbo___Radeon_Vega_8_AM4_Wraith_Stealth_Cooler_f414a507-grn.jpg'></CardImg>
+            <CardImg  src={`${productos[0].image}`}></CardImg>
             </Link>
             <Cardbody>
                 <ProductDescription>
-Procesador AMD RYZEN 3 3200G 4.0GHz Turbo + Radeon Vega 8 AM4 Wraith Stealth Cooler
+                    {
+                        productos[0].name
+                    }
                 </ProductDescription>
                 <ProductPrice>
-                $93.400
+                $
+                {
+                    productos[0].id
+                }
                 </ProductPrice>
                 <ProductshopcartContaier>
                 <Productshopcart>
