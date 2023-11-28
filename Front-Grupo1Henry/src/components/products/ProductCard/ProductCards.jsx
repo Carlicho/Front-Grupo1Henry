@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 
-const ProductCards = () => {
+const ProductCards = ({productos}) => {
 
     const ProductCardsContainer = styled.div`
 
@@ -12,10 +12,7 @@ const ProductCards = () => {
 
   return (
     <ProductCardsContainer>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
+        <ProductCard productos={productos}/>
     </ProductCardsContainer>
   )
 }
