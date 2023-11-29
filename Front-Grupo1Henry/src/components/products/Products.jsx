@@ -21,10 +21,12 @@ const Products = ({productos}) => {
 
   return (
     <GeneralContainerProd>
+
       <ContainerFilterCat>
         <ProductCategories/>
         <ProductFilterPrice />
       </ContainerFilterCat>
+  
       <ProductCards productos={productos} /> 
     </GeneralContainerProd>
   )

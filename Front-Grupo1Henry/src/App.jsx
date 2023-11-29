@@ -38,7 +38,8 @@ function App() {
          } else {
             window.alert('¡No hay personajes con este ID!');
          }
-      });
+      }).catch((error) => {         console.error('Error fetching data:', error)})
+      
    }
    
     console.log(productos,'ffff');

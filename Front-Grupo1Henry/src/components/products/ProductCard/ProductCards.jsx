@@ -9,10 +9,20 @@ const ProductCards = ({productos}) => {
     const ProductCardsContainer = styled.div`
 
         `;
-
+  console.log(typeof(productos), '-> tipo');
   return (
     <ProductCardsContainer>
-        <ProductCard productos={productos}/>
+        {/* <ProductCard productos={productos}/> */}
+        {productos.map((product)=>{
+        return(
+          <ProductCard
+          key={product.id}
+          id={product.id}
+          name={product.name}
+          image={product.image}/>
+
+        )
+      })}
     </ProductCardsContainer>
   )
 }
