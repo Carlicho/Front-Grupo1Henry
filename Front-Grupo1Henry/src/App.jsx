@@ -43,6 +43,13 @@ function App() {
    }
    
     console.log(productos,'ffff');
+  
+   
+      axios('http://localhost:3001/productos').then(({data}) => {
+        console.log(data, '->eeee');
+      })
+    
+  
   return (
     <div className='app'>
 
@@ -50,8 +57,7 @@ function App() {
 
     <Header onSearch={onSearch}/>
     
-      
-    
+     
     <Routes>
       <Route path={PathRoutes.LANDING} element={<Index/>}/>
       <Route path={PathRoutes.INDEX} element={<Index/>}/>

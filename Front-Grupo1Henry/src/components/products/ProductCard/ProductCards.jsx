@@ -9,7 +9,7 @@ const ProductCards = ({productos}) => {
     const ProductCardsContainer = styled.div`
 
         `;
-  console.log(typeof(productos), '-> tipo');
+  console.log(typeof productos, '-> tipo');
   return (
     <ProductCardsContainer>
         {/* <ProductCard productos={productos}/> */}
