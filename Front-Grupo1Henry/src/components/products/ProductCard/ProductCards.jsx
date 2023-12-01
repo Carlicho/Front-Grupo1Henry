@@ -12,15 +12,17 @@ const ProductCards = ({productos}) => {
   console.log(typeof productos, '-> tipo');
   return (
     <ProductCardsContainer>
-        {/* <ProductCard productos={productos}/> */}
         {productos.map((product)=>{
         return(
           <ProductCard
-          key={product.id}
-          id={product.id}
-          name={product.name}
-          image={product.image}/>
-
+          key={product.id_producto}
+          id={product.id_producto}
+          nombre={product.nombre}
+          image={product.url_imagen}
+          precio={product.precio}
+          descripcion={product.descripcion}
+          />
+          
         )
       })}
     </ProductCardsContainer>

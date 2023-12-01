@@ -11,7 +11,7 @@ import axios from 'axios';
 
 import ProductDetail from './components/products/ProductDetailCard/ProductDetail'
 import UserSettings from './components/UserLogued/UserSettings'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 
@@ -21,6 +21,10 @@ function App() {
 
   const [products, setProducts] = useState([])
  
+  const [usuarios, setUsuarios] = useState([])
+  const [dataProducts, setDataProducts] = useState([])
+  const [busqueda, setBusqueda] = useState("")
+
   //! cambiar el "id" por name
   //! startWith
   //! Agregar spread oparator en setProducts para almacenar el array de prodcutos que empiecen con "x" letra
@@ -28,40 +32,48 @@ function App() {
     // traer productos/
     // renderizar las cards
     // renderizar filtrado
-    const [productos, setProductos] = useState([])
+  //   const [productos, setProductos] = useState([])
 
-    function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-        console.log(data, '-> data');
-         if (data.name) {
-            setProductos(() => [data]);
-         } else {
-            window.alert('¡No hay personajes con este ID!');
-         }
-      }).catch((error) => {         console.error('Error fetching data:', error)})
-      
-   }
+  //   function onSearch(id) {
+  //     axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+  //       console.log(data, '-> data');
+  //        if (data.name) {
+  //           setProductos(() => [data]);
+  //        } else {
+  //           window.alert('¡No hay personajes con este ID!');
+  //        }
+  //     }).catch((error) => {         console.error('Error fetching data:', error)})
+  //  }
    
-    console.log(productos,'ffff');
+  //   console.log(productos,'ffff');
   
    
-      axios('http://localhost:3001/productos').then(({data}) => {
-        console.log(data, '->eeee');
-      })
+    const peticionGet = async () => {
+        await axios('http://localhost:3001/productos').then(res=>{
+          setUsuarios(res.data)
+          setDataProducts(res.data)
+          console.log(res.data, '->res ga');
+        }).catch(error =>{
+          console.log(error);
+        })
+    }
+    useEffect(() => {
+      peticionGet()
+    }, [])
     
-  
+
   return (
     <div className='app'>
 
 
 
-    <Header onSearch={onSearch}/>
+    <Header />
     
      
     <Routes>
       <Route path={PathRoutes.LANDING} element={<Index/>}/>
       <Route path={PathRoutes.INDEX} element={<Index/>}/>
-      <Route path={PathRoutes.PRODUCTOS} element={<Products productos={productos}/>} />
+      <Route path={PathRoutes.PRODUCTOS} element={<Products productos={usuarios}/>} />
       <Route path={PathRoutes.DETAIL} element={<ProductDetail/>}/>
       <Route path={PathRoutes.AYUDA} element={<Help/>}/>
       <Route path={PathRoutes.ABOUT} element={<About/>}/>
