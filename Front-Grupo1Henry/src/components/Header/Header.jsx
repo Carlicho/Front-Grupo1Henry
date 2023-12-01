@@ -9,7 +9,7 @@ import LoginButton from '../Buttons/LoginButton';
 import styled from 'styled-components'
 
 
-const Header = ({onSearch}) => {
+const Header = ({filtrar}) => {
 
   const Sh1 = styled.h1`
   font-size: 40px;
@@ -27,7 +27,7 @@ const Header = ({onSearch}) => {
         <div className={styles.mainHeader}>
         <Sh1>Innova</Sh1>
 
-        <SearchBar onSearch={onSearch}/>
+        <SearchBar filtrar={filtrar}/>
         
         <LoginButton/>
         

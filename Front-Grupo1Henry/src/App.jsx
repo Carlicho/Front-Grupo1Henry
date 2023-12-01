@@ -60,14 +60,24 @@ function App() {
     useEffect(() => {
       peticionGet()
     }, [])
+
+    console.log(usuarios, '-> usuarios');
     
+const filtrar = (terminoBusqueda) => {
+    var resultadosBusqueda=usuarios.filter((elementos)=> {
+      if (elementos.nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()) ) {
+        return elementos
+      }
+    })
+    setUsuarios(resultadosBusqueda)
+  }
 
   return (
     <div className='app'>
 
 
 
-    <Header />
+    <Header filtrar={filtrar} />
     
      
     <Routes>

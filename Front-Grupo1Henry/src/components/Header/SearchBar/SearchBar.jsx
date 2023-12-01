@@ -6,19 +6,14 @@ import { TiShoppingCart } from "react-icons/ti";
 
 import styled from 'styled-components'
 
-const SearchBar = ({onSearch}) => {
-  const [data, setData] = useState('')
-
-  const Sh1 = styled.h1`
-    font-size: 40px;
-    letter-spacing: 12px;
-    text-shadow: 2px 2px 2px blue;
-    text-shadow: -2px -2px -2px orange;
-  `;
-
+const SearchBar = ({filtrar}) => {
+  const [productos, setProductos] = useState('')
+  
+  console.log(productos, '-> dataaaaaa');
   const inputChange = (e) => {
     console.log(e.target.value);
-    setData(e.target.value)
+    // setProductos(e.target.value)
+    // filtrar(e.target.value)
   }
 
   return (
@@ -27,7 +22,7 @@ const SearchBar = ({onSearch}) => {
           <input
             placeholder='Buscador' 
             className={styles.searchInput}
-            value={data}
+            // value={data}
             onChange={inputChange}
           />
           <button onClick={() => onSearch(data)}>Agregar</button>
