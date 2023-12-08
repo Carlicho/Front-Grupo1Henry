@@ -5,7 +5,11 @@ const PathRoutes = {
     PRODUCTOS:"/productos",
     DETAIL:"/productdetail",
     LOGIN:"/account",
-    AYUDA:"/ayuda",
+    ADMIN:"/admin",
+    MONITORES:"/monitores",
+    NOTEBOOKS:"/notebooks",
+    PERIFERICOS:"/perifericos",
+    SEARCHRESULTS:"/searchresults",
 
 }
 

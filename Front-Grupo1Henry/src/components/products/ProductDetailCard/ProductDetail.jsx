@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { TiShoppingCart } from "react-icons/ti";
 import styled from 'styled-components'
 
