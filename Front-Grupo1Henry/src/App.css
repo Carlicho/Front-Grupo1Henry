@@ -12,3 +12,13 @@
 }
 
 
+.light-mode {
+  background-color: #ffffff; /* Light background color */
+  color: #000000; /* Light text color */
+}
+
+.dark-mode {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ffffff; /* Dark text color */
+}
+

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from 'react-router-dom';
 
-const ProductCard = ({key, id, name, status, image}) => {
+const ProductCard = ({key, id, name, status, image, precio, descripcion, nombre}) => {
     const CardContainer = styled.div`
 
     display: flex;
@@ -71,19 +71,26 @@ const ProductshopcartDescription = styled.span`
   return (
     <div>
         <CardContainer>
-            <Link to="/productDetail">
+            <Link to={`/productdetail/${id}`}>
             <CardImg  src={`${image}`}></CardImg>
             </Link>
             <Cardbody>
+            <Link to={`/productdetail/${id}`}>
+                <h2>
+                    {
+                        nombre
+                    }
+                </h2>
+                </Link >
                 <ProductDescription>
                     {
-                        id
+                        descripcion
                     }
                 </ProductDescription>
                 <ProductPrice>
                 $
                 {
-                    // productos[0].id
+                    precio
                 }
                 </ProductPrice>
                 <ProductshopcartContaier>

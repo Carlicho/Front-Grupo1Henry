@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import {Slideshow, Slide, TextoSlide} from './Slideshow';
+
+import {Slideshow, Slide, TextoSlide} from './slideshow'
 import img1 from '../../../../assets/img1.png'
 import img2 from '../../../../assets/img2.png'
 import img3 from '../../../../assets/img3.png'
 import img4 from '../../../../assets/img4.png'
-import styled from 'styled-components'
+
 
 
 
@@ -53,10 +53,11 @@ function Sliders() {
             <p>15% de descuento en Componentes de Pc</p>
         </TextoSlide>
         </Slide>
+
       </Slideshow>
 
     </div>
   )
 }
 
-export default Sliders;
+export default Sliders

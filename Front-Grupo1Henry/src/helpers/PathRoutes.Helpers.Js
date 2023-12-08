@@ -3,9 +3,13 @@ const PathRoutes = {
     INDEX:"/index",
     ABOUT:"/about",
     PRODUCTOS:"/productos",
-    DETAIL:"/productdetail",
+    DETAIL:"/productdetail/:id",
     LOGIN:"/account",
-    AYUDA:"/ayuda",
+    ADMIN:"/admin",
+    MONITORES:"/monitores",
+    NOTEBOOKS:"/notebooks",
+    PERIFERICOS:"/perifericos",
+    SEARCHRESULTS:"/searchresults",
 
 }
 

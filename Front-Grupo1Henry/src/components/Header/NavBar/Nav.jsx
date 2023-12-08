@@ -11,8 +11,7 @@ const NavBar = () => {
 
        
         <Link to="/productos"  className={styles.navlink }        >Products </Link>
-        <Link to="/armatupc"  className={styles.navlink }        >Arma Tu Pc </Link>
-        <Link to="/ayuda"     className={styles.navlink }        >Ayuda    </Link>
+        <Link to="/admin"     className={styles.navlink }        >Admin   </Link>
         <Link to="/about"   className={styles.navlink }        >Sobre nosotros   </Link>
         
     </nav>

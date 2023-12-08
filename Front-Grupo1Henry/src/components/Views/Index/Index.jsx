@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 
-import styles from './Index.module.css';
+import styles from './index.module.css'
 import Sliders from './Slider.jsx/Sliders';
 
 
