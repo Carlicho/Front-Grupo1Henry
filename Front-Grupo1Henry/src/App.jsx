@@ -8,6 +8,7 @@ import Admin from './components/Admin/Admin'
 import Index from './components/Views/Index/Index'
 import Footer from './components/Footer/Footer'
 import axios from 'axios';
+import UpLoadWidget from './components/Claudinary/upLoadWidget'
 
 import ProductDetail from './components/products/ProductDetailCard/ProductDetail'
 import UserSettings from './components/UserLogued/UserSettings'
@@ -17,12 +18,17 @@ import Notebooks from './components/products/ProductCategories/Notebooks/Noteboo
 import Monitores from './components/products/ProductCategories/Monitores/Monitores'
 import SearchResults from './components/Header/SearchBar/SearchResults'
 import SearchResultsList from './components/Header/SearchBar/SearchResultsList'
+import { CloudinaryContext } from 'cloudinary-react';
 
 
 
 
 
 function App() {
+  
+  
+
+
 
 
  
@@ -128,7 +134,7 @@ const filtrar = (terminoBusqueda) => {
   return (
     <div className='app'>
 
-
+    
 
   <Header setResults={setResults} filtrar={filtrar} />
     

@@ -3,7 +3,7 @@ const PathRoutes = {
     INDEX:"/index",
     ABOUT:"/about",
     PRODUCTOS:"/productos",
-    DETAIL:"/productdetail",
+    DETAIL:"/productdetail/:id",
     LOGIN:"/account",
     ADMIN:"/admin",
     MONITORES:"/monitores",

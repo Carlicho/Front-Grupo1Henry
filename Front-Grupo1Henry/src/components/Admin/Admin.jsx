@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
+import UpLoadWidget from '../Claudinary/upLoadWidget'
 
 
 const Admin = () => {
@@ -139,6 +140,8 @@ font-weight: bold;
         <Adminh2>Admin</Adminh2>
         </SectionTittle>
 
+        
+
         <TableContainer>
             <thead>
             <Tabletr>
@@ -152,6 +155,7 @@ font-weight: bold;
             <TableTd>1</TableTd>
             <TableTd>Monitores</TableTd>
             <TableButtons>
+            <UpLoadWidget/>
             <BtnAgregar>Agregar</BtnAgregar>
             <BtnEditar>Editar</BtnEditar>
             <BtnEliminar>Eliminar</BtnEliminar>

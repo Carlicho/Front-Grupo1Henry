@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const ProductCard = ({key, id, name, status, image, precio, descripcion, nombre}) => {
     const CardContainer = styled.div`
@@ -63,7 +64,29 @@ const ProductshopcartDescription = styled.span`
 `
 
 
-// console.log(productos, ' -> productos');
+//Function MercadoPago
+
+const Mercadopago = () => {
+    const url = 'http://localhost:3001/pagos';
+const data = {
+  id: id,
+  nombre: nombre,
+  precio:  precio,
+  cantidad: 1
+};
+
+axios.post(url, data)
+  .then(response => {
+    const paymentLink = response.data.paymentLink;
+    console.log('Respuesta del servidor:', response.data);
+
+    setTimeout(() => {
+        window.open(response.data, '_blank');
+      }, 150);
+  })
+  .catch(error => {
+    console.log(error);});
+}
 
 
 
@@ -71,15 +94,17 @@ const ProductshopcartDescription = styled.span`
   return (
     <div>
         <CardContainer>
-            <Link to="/productDetail">
+            <Link to={`/productdetail/${id}`}>
             <CardImg  src={`${image}`}></CardImg>
             </Link>
             <Cardbody>
+            <Link to={`/productdetail/${id}`}>
                 <h2>
                     {
                         nombre
                     }
                 </h2>
+                </Link >
                 <ProductDescription>
                     {
                         descripcion
@@ -92,8 +117,8 @@ const ProductshopcartDescription = styled.span`
                 }
                 </ProductPrice>
                 <ProductshopcartContaier>
-                <Productshopcart>
-                    SUMAR AL CARRITO
+                <Productshopcart onClick={Mercadopago}>
+                    Comprar
                 </Productshopcart>
                 <TiShoppingCart size="3.24rem" />
                 </ProductshopcartContaier>
