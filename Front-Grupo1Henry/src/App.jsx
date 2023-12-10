@@ -39,11 +39,9 @@ function App() {
       
    }
    
-    console.log(productos,'ffff');
-  
    
       axios('http://localhost:3001/productos').then(({data}) => {
-        console.log(data, '->eeee');
+        console.log(data);
       })
     
   
