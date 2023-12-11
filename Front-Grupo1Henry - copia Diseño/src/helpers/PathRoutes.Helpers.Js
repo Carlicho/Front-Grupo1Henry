@@ -4,13 +4,13 @@ const PathRoutes = {
     ABOUT:"/about",
     PRODUCTOS:"/productos",
     DETAIL:"/productdetail/:id",
-    LOGIN:"/account",
+    PERFIL:"/perfil",
     ADMIN:"/admin",
     MONITORES:"/monitores",
     NOTEBOOKS:"/notebooks",
     PERIFERICOS:"/perifericos",
     SEARCHRESULTS:"/searchresults",
-
+    HISTORIAL: '/historial'
 }
 
 export default PathRoutes
