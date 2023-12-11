@@ -1,15 +1,16 @@
 import styled from 'styled-components'
-import UpLoadWidget from '../Claudinary/upLoadWidget'
+import UpLoadWidget from '../Claudinary/UpLoadWidget'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const {
+  VITE_URL_BACKEND
+} = import.meta.env;
 
 const Admin = () => {
 
-
 //prueba
 const [showForm, setShowForm] = useState(false);
-const url = 'http://localhost:3001/productos';
 const [productos, setProductos] = useState([]);
 const [id,setId]= useState('');
 const [nombre,setName]= useState('');
@@ -36,7 +37,7 @@ useEffect(()=>{
 },[]);
 
 const getProductos = async () => {
-  await axios('http://localhost:3001/productos').then(res=>{
+  await axios(`${VITE_URL_BACKEND}/productos`).then(res=>{
     setProductos(res.data)
     console.log(res.data, '->data admin');
   }).catch(error =>{

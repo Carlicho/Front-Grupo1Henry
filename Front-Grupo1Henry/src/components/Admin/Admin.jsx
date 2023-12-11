@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import UpLoadWidget from '../Claudinary/upLoadWidget'
+import UpLoadWidget from '../Claudinary/UpLoadWidget'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 

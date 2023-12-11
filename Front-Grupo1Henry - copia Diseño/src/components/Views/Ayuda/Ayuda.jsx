@@ -6,4 +6,4 @@ const Ayuda = () => {
   )
 }
 
-export default Ayuda
+export default Ayuda;

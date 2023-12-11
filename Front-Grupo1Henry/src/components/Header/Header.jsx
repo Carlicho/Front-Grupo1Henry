@@ -1,12 +1,11 @@
 import React from 'react';
-import SearchBar from './SearchBar/SearchBar';
 import NavBar from './NavBar/Nav';
 import styles from './Header.module.css';
-import { HiOutlineSearch } from 'react-icons/hi';
 import { TiShoppingCart } from 'react-icons/ti';
 import LoginButton from '../Buttons/LoginButton';
 import styled from 'styled-components';
 import SearchBar2 from './SearchBar/SearchBar2';
+import LogoutButton from '../Buttons/LogoutButton';
 
 const Header = ({ setResults }) => {
   const Sh1 = styled.h1`
@@ -24,6 +23,7 @@ const Header = ({ setResults }) => {
           <Sh1>Innova</Sh1>
           <SearchBar2 setResults={setResults} />
           <LoginButton />
+          <LogoutButton />
           <TiShoppingCart size="3.24rem" />
         </div>
         <NavBar />

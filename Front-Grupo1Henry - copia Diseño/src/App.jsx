@@ -1,34 +1,28 @@
+import { useEffect,useState } from 'react';
+import PathRoutes from './helpers/PathRoutes.Helpers.Js';
+import { Route, Routes } from 'react-router-dom';
+import About from './components/Views/About/About';
+import Header from './components/Header/Header';
+import Products from './components/products/Products';
+import Index from './components/Views/Index/Index';
+import Footer from './components/Footer/Footer';
 import './App.css';
-import PathRoutes from './helpers/PathRoutes.Helpers.Js'
-import { Route, Routes } from 'react-router-dom'
-import About from './components/Views/About/About'
-import Header from './components/Header/Header'
-import Products from './components/products/products'
 import Admin from './components/Admin/Admin'
-import Index from './components/Views/Index/Index'
-import Footer from './components/Footer/Footer'
 import axios from 'axios';
-import UpLoadWidget from './components/Claudinary/upLoadWidget'
-
 import ProductDetail from './components/products/ProductDetailCard/ProductDetail'
-import UserSettings from './components/UserLogued/UserSettings'
-import { useEffect, useState } from 'react'
 import Perfiericos from './components/products/ProductCategories/Perifericos/Perfiericos'
 import Notebooks from './components/products/ProductCategories/Notebooks/Notebooks'
 import Monitores from './components/products/ProductCategories/Monitores/Monitores'
 import SearchResults from './components/Header/SearchBar/SearchResults'
 import SearchResultsList from './components/Header/SearchBar/SearchResultsList'
-import { CloudinaryContext } from 'cloudinary-react';
 import { createContext } from 'react';
-import { ThemeProvider } from 'styled-components';
 import ReactSwitch from 'react-switch';
-
 export const ThemeContext = createContext(null);
 
 
-
-
-
+const {
+  VITE_URL_BACKEND
+} = import.meta.env;
 
 function App() {
   
@@ -44,10 +38,7 @@ function App() {
   const [allMonitores, setAllMonitores] = useState([])
   const [allNotebooks, setAllNotebooks] = useState([])
   const [allPerfiericos, setAllPerfiericos] = useState([])
-  
-
   const [dataProducts, setDataProducts] = useState([])
-  const [busqueda, setBusqueda] = useState("")
   const[results, setResults] = useState([])
 
   //! cambiar el "id" por name
@@ -73,7 +64,7 @@ function App() {
   //   console.log(productos,'ffff');
 
   const perifericosGet = async () => {
-    await axios('http://localhost:3001/categorias/3/productos').then(res=>{
+    await axios(`${VITE_URL_BACKEND}/categorias/3/productos`).then(res=>{
       setAllPerfiericos(res.data.productos)
       setDataProducts(res.data.productos)
       console.log(res.data.productos, '->res ga');
@@ -87,7 +78,7 @@ useEffect(() => {
 
 
   const notebooksGet = async () => {
-    await axios('http://localhost:3001/categorias/1/productos').then(res=>{
+    await axios(`${VITE_URL_BACKEND}/categorias/1/productos`).then(res=>{
       setAllNotebooks(res.data.productos)
       setDataProducts(res.data.productos)
       console.log(res.data.productos, '->res ga');
@@ -102,7 +93,7 @@ useEffect(() => {
   
 
   const monitoresGet = async () => {
-    await axios('http://localhost:3001/categorias/2/productos').then(res=>{
+    await axios(`${VITE_URL_BACKEND}/categorias/2/productos`).then(res=>{
       setAllMonitores(res.data.productos)
       setDataProducts(res.data.productos)
       console.log(res.data.productos, '->res ga');
@@ -116,7 +107,7 @@ useEffect(() => {
 
    
     const peticionGet = async () => {
-        await axios('http://localhost:3001/productos').then(res=>{
+        await axios(`${VITE_URL_BACKEND}/productos`).then(res=>{
           setAllProducts(res.data)
           setDataProducts(res.data)
           console.log(res.data, '->res ga');

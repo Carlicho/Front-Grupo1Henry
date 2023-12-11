@@ -20,6 +20,10 @@ import ReactSwitch from 'react-switch';
 export const ThemeContext = createContext(null);
 
 
+const {
+  VITE_URL_BACKEND
+} = import.meta.env;
+
 function App() {
   
   
@@ -60,7 +64,7 @@ function App() {
   //   console.log(productos,'ffff');
 
   const perifericosGet = async () => {
-    await axios('http://localhost:3001/categorias/3/productos').then(res=>{
+    await axios(`${VITE_URL_BACKEND}/categorias/3/productos`).then(res=>{
       setAllPerfiericos(res.data.productos)
       setDataProducts(res.data.productos)
       console.log(res.data.productos, '->res ga');
@@ -74,7 +78,7 @@ useEffect(() => {
 
 
   const notebooksGet = async () => {
-    await axios('http://localhost:3001/categorias/1/productos').then(res=>{
+    await axios(`${VITE_URL_BACKEND}/categorias/1/productos`).then(res=>{
       setAllNotebooks(res.data.productos)
       setDataProducts(res.data.productos)
       console.log(res.data.productos, '->res ga');
@@ -89,7 +93,7 @@ useEffect(() => {
   
 
   const monitoresGet = async () => {
-    await axios('http://localhost:3001/categorias/2/productos').then(res=>{
+    await axios(`${VITE_URL_BACKEND}/categorias/2/productos`).then(res=>{
       setAllMonitores(res.data.productos)
       setDataProducts(res.data.productos)
       console.log(res.data.productos, '->res ga');
@@ -103,7 +107,7 @@ useEffect(() => {
 
    
     const peticionGet = async () => {
-        await axios('http://localhost:3001/productos').then(res=>{
+        await axios(`${VITE_URL_BACKEND}/productos`).then(res=>{
           setAllProducts(res.data)
           setDataProducts(res.data)
           console.log(res.data, '->res ga');
