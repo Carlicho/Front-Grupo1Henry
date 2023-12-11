@@ -15,6 +15,7 @@ import Notebooks from './components/products/ProductCategories/Notebooks/Noteboo
 import Monitores from './components/products/ProductCategories/Monitores/Monitores'
 import SearchResults from './components/Header/SearchBar/SearchResults'
 import SearchResultsList from './components/Header/SearchBar/SearchResultsList'
+import Perfil from './components/Perfil/Perfil'
 import { createContext } from 'react';
 import ReactSwitch from 'react-switch';
 
@@ -177,6 +178,7 @@ const filtrar = (terminoBusqueda) => {
       <Route path={PathRoutes.NOTEBOOKS} element={<Notebooks productos={allNotebooks}/>}/>
       <Route path={PathRoutes.PERIFERICOS} element={<Perfiericos productos={allPerfiericos}/>}/>
       <Route path={PathRoutes.SEARCHRESULTS} element={<SearchResults results={results}/>}/>
+      <Route path={PathRoutes.PERFIL} element={<Perfil />}/>
     </Routes> 
     <Footer />
 

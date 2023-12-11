@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import styles from './LoginButton.module.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const {
   VITE_URL_BACKEND,
@@ -11,6 +12,8 @@ const {
 
 const LoginButton = () => {
   const { user, loginWithRedirect, isAuthenticated, getAccessTokenSilently, logout } = useAuth0();
+  const [ nombreCompleto, setNombreCompleto ] = useState('');
+  const token = useRef();
 
   useEffect(() => {
     const getAccessToken = async () => {
@@ -20,6 +23,8 @@ const LoginButton = () => {
             audience: VITE_AUTH0_AUDIENCE
           }
         });
+
+        token.current = accessToken;
     
         let result;
 
@@ -48,12 +53,29 @@ const LoginButton = () => {
     getAccessToken();
   }, [getAccessTokenSilently, user?.sub]);
 
+  useEffect(() => {
+    const getUsuario = async () => {
+        const result = await axios.get(`${VITE_URL_BACKEND}/usuarios/${user.sub}`, {
+            headers: {
+                'Authorization': `Bearer ${token.current}`
+            }
+        });
+
+        setNombreCompleto(result.data.nombre_completo);
+    };
+
+    getUsuario();
+}, [user?.sub]);
+
   return (
     <div>
       {!isAuthenticated ? (
         <button className={styles.LoginBtn} onClick={() => loginWithRedirect()}>Login</button>
       ) : (
-        <p>Bienvenido, has iniciado sesión</p>
+        <>
+          <p>Bienvenido/a, {nombreCompleto}.</p>
+          <Link to="/perfil">Ver perfil</Link>
+        </>
       )}
     </div>
   );
