@@ -14,6 +14,10 @@ import axios from 'axios';
 import ProductDetail from './components/products/ProductDetailCard/ProductDetail';
 import UserSettings from './components/UserLogued/UserSettings';
 
+const {
+  VITE_URL_BACKEND
+} = import.meta.env;
+
 function App() {
 
   const [products, setProducts] = useState([])
@@ -40,7 +44,7 @@ function App() {
    }
    
    
-      axios('http://localhost:3001/productos').then(({data}) => {
+      axios(`${VITE_URL_BACKEND}/productos`).then(({data}) => {
         console.log(data);
       })
     
