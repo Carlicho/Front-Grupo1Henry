@@ -11,11 +11,15 @@ const {
 } = import.meta.env;
 
 const LoginButton = () => {
-  const { user, loginWithRedirect, isAuthenticated, getAccessTokenSilently, logout } = useAuth0();
+  const { isLoading, user, loginWithRedirect, isAuthenticated, getAccessTokenSilently, logout } = useAuth0();
   const [ nombreCompleto, setNombreCompleto ] = useState('');
-  const token = useRef();
+  const [ token, setToken ] = useState('');
 
   useEffect(() => {
+    if ( isLoading ) {
+      return;
+    }
+
     const getAccessToken = async () => {
       try {
         const accessToken = await getAccessTokenSilently({
@@ -24,14 +28,12 @@ const LoginButton = () => {
           }
         });
 
-        token.current = accessToken;
+        setToken(accessToken);
     
-        let result;
-
         if ( user ){
           console.log('user', user);
 
-          result = await axios.post(`${VITE_URL_BACKEND}/auth`,
+          await axios.post(`${VITE_URL_BACKEND}/auth`,
             {
               sub: user.sub,
               name: user.name,
@@ -45,27 +47,39 @@ const LoginButton = () => {
           console.error('El usuario actual no esta autorizado para acceso al sitio.');
           logout({ logoutParams: { returnTo: VITE_URL_FRONTEND } });
         } else {
-          console.error(error);
+          console.warn(error);
         }
       }
     };
 
     getAccessToken();
-  }, [getAccessTokenSilently, user?.sub]);
+  }, [getAccessTokenSilently, user?.sub, isLoading]);
 
   useEffect(() => {
+    if ( !token ) {
+      return;
+    }
+    
     const getUsuario = async () => {
-        const result = await axios.get(`${VITE_URL_BACKEND}/usuarios/${user.sub}`, {
-            headers: {
-                'Authorization': `Bearer ${token.current}`
-            }
-        });
+      try {
+        let result; 
 
-        setNombreCompleto(result.data.nombre_completo);
+        if ( user && token ) {
+          result = await axios.get(`${VITE_URL_BACKEND}/usuarios/${user?.sub || 0}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+          });
+        }
+
+        setNombreCompleto(result?.data?.nombre_completo);
+      } catch (exception) {
+        console.error('Error en loginbutton', exception);
+      }
     };
 
     getUsuario();
-}, [user?.sub]);
+  }, [user?.sub, token]);
 
   return (
     <div>

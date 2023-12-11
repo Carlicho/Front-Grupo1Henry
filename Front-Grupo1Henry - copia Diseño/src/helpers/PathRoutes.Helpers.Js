@@ -10,7 +10,8 @@ const PathRoutes = {
     NOTEBOOKS:"/notebooks",
     PERIFERICOS:"/perifericos",
     SEARCHRESULTS:"/searchresults",
-    HISTORIAL: '/historial'
+    HISTORIAL: '/historial',
+    USUARIOS: '/usuarios'
 }
 
 export default PathRoutes
