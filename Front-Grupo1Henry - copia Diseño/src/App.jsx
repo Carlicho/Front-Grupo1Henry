@@ -17,14 +17,20 @@ import SearchResults from './components/Header/SearchBar/SearchResults'
 import SearchResultsList from './components/Header/SearchBar/SearchResultsList'
 import { createContext } from 'react';
 import ReactSwitch from 'react-switch';
+
+import { useAuth0 } from '@auth0/auth0-react';
+import { jwtDecode } from 'jwt-decode';
+
 export const ThemeContext = createContext(null);
 
 
 const {
-  VITE_URL_BACKEND
+  VITE_URL_BACKEND,
+  VITE_AUTH0_AUDIENCE
 } = import.meta.env;
 
 function App() {
+  const { getAccessTokenSilently } = useAuth0();
   
   
   const [theme, setTheme] = useState("light")
@@ -106,20 +112,39 @@ useEffect(() => {
 }, [])
 
    
-    const peticionGet = async () => {
-        await axios(`${VITE_URL_BACKEND}/productos`).then(res=>{
-          setAllProducts(res.data)
-          setDataProducts(res.data)
-          console.log(res.data, '->res ga');
-        }).catch(error =>{
-          console.log(error);
-        })
-    }
-    useEffect(() => {
-      peticionGet()
-    }, [])
+  const peticionGet = async () => {
+      await axios(`${VITE_URL_BACKEND}/productos`, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      }).then(res=>{
+        setAllProducts(res.data)
+        setDataProducts(res.data)
+        console.log(res.data, '->res ga');
+      }).catch(error =>{
+        console.log(error);
+      })
+  };
 
-    console.log(allMonitores, '-> usuarios');
+  useEffect(() => {
+    const getAccessToken = async () => {
+      const accessToken = await getAccessTokenSilently({
+        authorizationParams: {
+          audience: VITE_AUTH0_AUDIENCE
+        }
+      });
+
+      const decodedToken = jwtDecode(accessToken);
+
+      console.log('access token', decodedToken.permissions)
+    };
+
+
+    getAccessToken();
+    peticionGet();
+  }, [getAccessTokenSilently]);
+
+  console.log(allMonitores, '-> usuarios');
     
 const filtrar = (terminoBusqueda) => {
     var resultadosBusqueda=allProducts.filter((elementos)=> {

@@ -24,6 +24,8 @@ const LoginButton = () => {
         let result;
 
         if ( user ){
+          console.log('user', user);
+
           result = await axios.post(`${VITE_URL_BACKEND}/auth`,
             {
               sub: user.sub,
