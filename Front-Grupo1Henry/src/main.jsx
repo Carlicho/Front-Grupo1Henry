@@ -12,6 +12,7 @@ const {
 } = import.meta.env;
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider
     domain={VITE_AUTH0_DOMAIN}

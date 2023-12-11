@@ -1,0 +1,3 @@
+
+Index.css maneja el contenido total de la pagina,
+ le asigne un margin a de altura y ancho para que no quede pegado en los bordes

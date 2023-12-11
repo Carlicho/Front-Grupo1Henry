@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.3",
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -18,11 +20,13 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.6.2",
     "babel-plugin-macros": "^3.1.0",
+    "cloudinary-react": "^1.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-overlay": "6.0.11",
     "react-icons": "^4.12.0",
     "react-router-dom": "6.19.0",
+    "react-switch": "^7.0.0",
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
