@@ -18,22 +18,17 @@ import SearchResultsList from './components/Header/SearchBar/SearchResultsList'
 import Perfil from './components/Perfil/Perfil'
 import { createContext } from 'react';
 import ReactSwitch from 'react-switch';
+import Usuarios from './components/Usuarios/Usuarios';
 
-import { useAuth0 } from '@auth0/auth0-react';
-import { jwtDecode } from 'jwt-decode';
 
 export const ThemeContext = createContext(null);
 
 
 const {
-  VITE_URL_BACKEND,
-  VITE_AUTH0_AUDIENCE
+  VITE_URL_BACKEND
 } = import.meta.env;
 
 function App() {
-  const { getAccessTokenSilently } = useAuth0();
-  
-  
   const [theme, setTheme] = useState("light")
   
   const toggleTheme = ()=>{
@@ -128,22 +123,8 @@ useEffect(() => {
   };
 
   useEffect(() => {
-    const getAccessToken = async () => {
-      const accessToken = await getAccessTokenSilently({
-        authorizationParams: {
-          audience: VITE_AUTH0_AUDIENCE
-        }
-      });
-
-      const decodedToken = jwtDecode(accessToken);
-
-      console.log('access token', decodedToken.permissions)
-    };
-
-
-    getAccessToken();
     peticionGet();
-  }, [getAccessTokenSilently]);
+  }, []);
 
   console.log(allMonitores, '-> usuarios');
     
@@ -179,6 +160,7 @@ const filtrar = (terminoBusqueda) => {
       <Route path={PathRoutes.PERIFERICOS} element={<Perfiericos productos={allPerfiericos}/>}/>
       <Route path={PathRoutes.SEARCHRESULTS} element={<SearchResults results={results}/>}/>
       <Route path={PathRoutes.PERFIL} element={<Perfil />}/>
+      <Route path={PathRoutes.USUARIOS} element={<Usuarios />}/>
     </Routes> 
     <Footer />
 
