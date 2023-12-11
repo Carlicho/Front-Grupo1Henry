@@ -1,5 +1,4 @@
-
-import {Slideshow, Slide, TextoSlide} from './slideshow'
+import {Slideshow, Slide, TextoSlide} from './Slideshow';
 import img1 from '../../../../assets/img1.png'
 import img2 from '../../../../assets/img2.png'
 import img3 from '../../../../assets/img3.png'
@@ -60,4 +59,4 @@ function Sliders() {
   )
 }
 
-export default Sliders
+export default Sliders;
